@@ -124,7 +124,7 @@ function Carousel(props) {
     }
 
     function createProductSlide(slide, index) {
-      const imgPath = "/home_page/heroCarousel/" + slide.imgPath;
+      const imgPath = "home_page/heroCarousel/" + slide.imgPath;
       const product = productData[index];
 
       const link = "/product/" + slide.productID;
