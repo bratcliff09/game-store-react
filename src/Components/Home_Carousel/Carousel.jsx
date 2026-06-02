@@ -106,7 +106,7 @@ function Carousel(props) {
     return tmpArr;
 
     function createNonProductSlide(slide, index) {
-      const imgPath = "/home_page/heroCarousel/" + slide.imgPath;
+      const imgPath = "home_page/heroCarousel/" + slide.imgPath;
 
       tmpArr.push(
         <li className={styles.slide} key={index}>

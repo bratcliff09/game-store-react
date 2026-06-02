@@ -29,7 +29,7 @@ function ProductItem(props) {
   return (
     <li className="product-listing">
       <Link to={"/product/" + id}>
-        <img src={imagePath} alt={title + " box art"} />
+        <img src={imagePath} alt="" />
         <div className="product-info">
           <p className="title">{title}</p>
           <p className="price">{finalPrice}</p>

@@ -18,7 +18,7 @@ function Carousel(props) {
       >
         <button
           onClick={() => carouselSetPage(index)}
-          aria-label={`Slide ${index + 1}`}
+          aria-label={`Select Slide ${index + 1}`}
         >
           <img src={path} />
         </button>

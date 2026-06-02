@@ -1,16 +1,19 @@
-# React + Vite
+# GameStore React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React version of my previous GameStore website, a video game ecommerce static website.
 
-Currently, two official plugins are available:
+- https://bratcliff09.github.io/game-store-static/
+- https://github.com/bratcliff09/game-store-static
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Features Unique to this Version
 
-## React Compiler
+- Debug Menu
+  - Allows the user to (1) control how long it takes for network requests to execute and (2) if network requests execute successfully at all
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+MirageJS
+
+- Used to emulate network requests

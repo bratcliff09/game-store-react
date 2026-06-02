@@ -95,14 +95,15 @@ function ProductPage() {
   let carouselPaths = [];
   function getCarouselMain() {
     const { main, carousel, path } = productData.images;
+    const { title } = productData;
     // Used later by carousel-slider
     carouselPaths = [main].concat(carousel);
     carouselPaths = carouselPaths.map((element) => path + "/" + element);
 
     let i = 0;
-    return carouselPaths.map((path) => (
+    return carouselPaths.map((path, index) => (
       <li key={i++}>
-        <img src={`product/${path}`} />
+        <img src={`product/${path}`} alt={"Slide " + (index + 1)} />
       </li>
     ));
   }
@@ -308,7 +309,7 @@ function ProductPage() {
             </div>
             <div id="specifics-right">
               <div id="esrb" className={styles.esrb}>
-                <img src={"/esrb/" + productData.esrb.rating.img} />
+                <img src={"esrb/" + productData.esrb.rating.img} />
                 <ul>
                   {productData.esrb.content.map((descriptor, index) => (
                     <li key={index}>

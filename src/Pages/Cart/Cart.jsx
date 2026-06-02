@@ -186,7 +186,7 @@ function Cart() {
                   <li key={index} className={styles.product_game}>
                     <div>
                       <img
-                        src={`/product/${product.images.path}/${product.images.main}`}
+                        src={`product/${product.images.path}/${product.images.main}`}
                       />
                     </div>
                     <div>
