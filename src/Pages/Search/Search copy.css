@@ -1,0 +1,273 @@
+#main-wrapper {
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-columns: 30% auto;
+  column-gap: 1rem;
+}
+
+/*Main----*/
+main {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main h2 {
+  margin-bottom: 16px;
+}
+
+main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+/*Aside----*/
+form[inert] {
+  opacity: 0.2;
+}
+
+aside {
+  padding: 1rem;
+  width: 100%;
+  height: fit-content;
+  background-color: #333132;
+  border-radius: var(--border-radius);
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside legend {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+aside fieldset {
+  border: none;
+  margin: 1rem 0;
+}
+
+#price-fieldset div {
+  display: flex;
+  gap: 8px;
+}
+
+#price-fieldset div input {
+  font-size: 1.125rem;
+  padding: 4px;
+  border: 1px solid #00000080;
+  border-radius: var(--border-radius);
+
+  width: 50%;
+}
+
+#form-submit-btn,
+#clear-filters-btn {
+  font-size: 1.125rem;
+  padding: 4px;
+  border: 1px solid #fff;
+  border-radius: var(--border-radius);
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4px;
+  transition: background-color 0.25s ease;
+
+  background-color: #fff;
+  color: #000;
+}
+
+#form-submit-btn:hover,
+#clear-filters-btn:hover {
+  background-color: #b3b3c1;
+}
+
+#mobile-filters-close,
+#mobile-filters-open {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-filters-close > span,
+#mobile-filters-open > span {
+  font-size: 2.25rem;
+}
+
+/*Custom Checkbox*/
+.custom-checkbox {
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+
+  display: grid;
+  place-content: center;
+}
+
+.custom-checkbox input[type="checkbox"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-clip-path: polygon(80% 0, 97% 12%, 38% 100%, 0 68%, 12% 50%, 36% 69%);
+  clip-path: polygon(80% 0, 97% 12%, 38% 100%, 0 68%, 12% 50%, 36% 69%);
+
+  transform: scale(0);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  box-shadow: inset 1em 1em #000;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: var(--col-selected);
+  color: var(--col-selected);
+}
+
+.custom-checkbox > div {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translateY(-0.2em);
+}
+
+/* Skeleton */
+span.skeleton {
+  color: transparent;
+}
+
+main ul li.skeleton {
+  height: 375px;
+}
+
+/*Network Error*/
+.network-error p {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.network-error button {
+  padding: 4px 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  justify-self: center;
+
+  border-radius: var(--border-radius);
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+
+  transition: background-color 0.25s ease;
+}
+
+.network-error button:hover {
+  background-color: #b3b3c1;
+}
+
+/*Responsive*/
+@media (max-width: 830px) {
+  #main-wrapper {
+    display: block;
+    height: fit-content;
+    position: relative;
+  }
+
+  #aside-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #00000070;
+  }
+
+  #aside-wrapper:is(.open) {
+    display: block;
+  }
+
+  aside {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    overflow-y: auto;
+  }
+
+  #mobile-filters-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40%;
+  }
+
+  #mobile-filters-open {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  main h2 {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 700px) {
+  main ul {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  aside {
+    width: 60%;
+  }
+
+  #mobile-filters-close {
+    left: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  main ul {
+    display: block;
+  }
+
+  main ul li {
+    margin-bottom: 16px;
+  }
+
+  aside {
+    width: 80%;
+  }
+
+  #mobile-filters-close {
+    left: 80%;
+  }
+}

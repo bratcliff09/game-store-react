@@ -1,0 +1,314 @@
+main {
+  padding: 0;
+}
+
+/* Top (Coursel and Price) */
+#game-summary {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  grid-template-rows: 1fr;
+  column-gap: var(--section-padding);
+  row-gap: 0px;
+
+  padding: var(--section-padding);
+}
+
+#carousel-main {
+  background-color: #00000052;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+#carousel-main ul {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+#carousel-main ul li {
+  flex-shrink: 0;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+#carousel-main ul li img {
+  /* max-width: 100%; */
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+#carousel-slider {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  margin-top: 10px;
+}
+
+#carousel-slider > button {
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  transition: background-color 0.25s ease;
+  height: 100%;
+  width: 100%;
+}
+
+#carousel-slider > button:hover {
+  background-color: #00000080;
+}
+
+#carousel-slider span {
+  font-size: 3rem;
+}
+
+#carousel-slider ul {
+  max-width: 100cqw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 0.5rem;
+
+  scrollbar-width: none;
+}
+
+#carousel-slider ul li button {
+  border: none;
+}
+
+#carousel-slider ul li img {
+  max-height: 5rem;
+  cursor: pointer;
+}
+
+#carousel-slider ul li.carousel-selected img {
+  border: 2px inset var(--col-selected);
+}
+
+/* Top Right */
+#game-summary section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#game-summary section fieldset {
+  border: none;
+}
+
+#game-summary section fieldset legend {
+  display: block;
+  font-size: 1.25rem;
+}
+
+#game-summary section fieldset input {
+  padding: 0.25rem 0.35rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 8px 8px 0;
+}
+
+#game-summary section fieldset input:hover {
+  background-color: var(--col-gray);
+}
+
+#game-summary section fieldset input.platform-selected {
+  background-color: #fff;
+  color: #000;
+}
+
+#cta-btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.25s ease;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+#cta-btn:hover {
+  color: #000;
+  background-color: var(--col-cta-hover);
+}
+
+.add-to-cart {
+  background-color: var(--col-add-to-cart);
+  color: #000;
+}
+
+.go-to-cart {
+  background-color: var(--col-go-to-cart);
+  color: #000;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.discount {
+  border: 1px solid var(--col-sale);
+  border-radius: 10px;
+  background-color: var(--col-sale);
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.original-price {
+  color: var(--col-sale);
+  text-decoration: line-through;
+}
+
+/* DO do do od*/
+#specifics {
+  background-color: #7e7c8e30;
+  padding: var(--section-padding);
+}
+
+#specifics h2,
+#game-description h2 {
+  font-size: 1.75rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+#specifics p,
+#game-description p {
+  font-size: 1.2rem;
+}
+
+#specifics > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#specifics-left div {
+  display: grid;
+  grid-template-columns: 190px auto;
+  column-gap: 10px;
+}
+
+#specifics-left div > p:first-of-type::after {
+  content: ":";
+}
+
+#esrb {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+#esrb img {
+  height: 5.5rem;
+}
+
+#esrb ul {
+  list-style: none;
+}
+
+/* Description */
+#game-description {
+  background-color: #4b4c7b;
+  padding: var(--section-padding);
+}
+
+/* Skeleton */
+#carousel-main ul:has(> li.skeleton) {
+  height: 100%;
+}
+
+#carousel-slider ul:has(> li.skeleton) {
+  height: 100%;
+}
+
+#carousel-slider ul li.skeleton {
+  width: 100px;
+  height: 70px;
+}
+
+#game-summary section h1.skeleton {
+  height: fit-content;
+  color: transparent;
+}
+
+.price.skeleton {
+  height: fit-content;
+  width: fit-content;
+}
+
+.price.skeleton .discount,
+.price.skeleton .original-price {
+  display: none;
+}
+
+#specifics-left div .skeleton {
+  width: max-content;
+}
+
+#esrb > div.skeleton {
+  width: 100px;
+  height: 125px;
+}
+
+#game-description p.skeleton {
+  height: fit-content;
+}
+
+@media (max-width: 830px) {
+  #carousel-slider ul {
+    scrollbar-color: var(--col-scrollbar) transparent;
+    scrollbar-width: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  #game-summary {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 0px;
+    row-gap: 0px;
+  }
+
+  #game-summary aside {
+    margin-bottom: 24px;
+  }
+
+  #carousel-slider {
+    grid-template-columns: 1fr;
+  }
+
+  #carousel-slider > button {
+    display: none;
+  }
+
+  #specifics > div {
+    grid-template-columns: 1fr;
+    row-gap: var(--section-padding);
+  }
+
+  #esrb img {
+    height: 7.5rem;
+  }
+}

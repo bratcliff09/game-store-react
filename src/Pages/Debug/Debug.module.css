@@ -1,0 +1,24 @@
+.main h1 {
+    margin-bottom: 4px;
+}
+
+.main img {
+    border: 1px solid #fff;
+    max-height: 250px;
+}
+
+.main>div {
+    margin-bottom: 8px
+}
+
+.main>div>p:last-of-type {
+    margin-bottom: 8px
+}
+
+.flex {
+    display: flex;
+}
+
+.flex>img {
+    height: 110px;
+}

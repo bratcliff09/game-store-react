@@ -1,0 +1,81 @@
+.carousel_main {
+  background-color: #00000052;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.carousel_main ul {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel_main ul li {
+  flex-shrink: 0;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel_main ul li img {
+  /* max-width: 100%; */
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+.carousel_slider {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  margin-top: 10px;
+}
+
+.carousel_slider > button {
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  transition: background-color 0.25s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel_slider > button:hover {
+  background-color: #00000080;
+}
+
+.carousel_slider span {
+  font-size: 3rem;
+}
+
+.carousel_slider ul {
+  max-width: 100cqw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 0.5rem;
+
+  scrollbar-width: none;
+}
+
+.carousel_slider ul li button {
+  border: none;
+  background-color: transparent;
+}
+
+.carousel_slider ul li img {
+  max-height: 5rem;
+  cursor: pointer;
+}
+
+.carousel_slider ul .carousel_selected img {
+  border: 2px inset var(--col-selected);
+}

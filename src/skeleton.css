@@ -1,0 +1,21 @@
+/*Skeleton Product List Items*/
+.skeleton {
+  border-radius: var(--border-radius);
+  width: 100%;
+  background: #393e4a;
+  color: transparent;
+
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: SkeletonAnim;
+}
+
+@keyframes SkeletonAnim {
+  50% {
+    background: #393e4a;
+  }
+  100% {
+    background: #646b7d;
+  }
+}

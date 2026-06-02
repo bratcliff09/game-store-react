@@ -1,0 +1,81 @@
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.btn>div {
+  font-size: 3rem;
+  color: #fff;
+  transition: color 0.125s ease-in;
+  cursor: pointer;
+}
+
+.btn>div:hover {
+  color: var(--col-cart-orange);
+}
+
+/* DropDown */
+.dropdown {
+  width: 200px;
+  background-color: rgb(87, 101, 114);
+  position: absolute;
+  top: 58px;
+  right: 0px;
+  padding: 8px;
+}
+
+.dropdown.closed {
+  display: none;
+}
+
+.dropdown>div {
+  margin-bottom: 8px;
+}
+
+.dropdown div label {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+/* Network Speed */
+.network_speed {
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+/* Toggle */
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-color: #fff;
+  height: 25px;
+  width: 60px;
+  border-radius: var(--border-radius);
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background-color: #d6d6e0;
+}
+
+.toggle::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 25px;
+  border-radius: var(--border-radius);
+  background-color: rgb(232, 7, 78);
+
+  position: relative;
+  left: 30px;
+  transition: all 0.8s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+.toggle:checked::after {
+  background-color: rgb(29, 228, 148);
+  left: 0px;
+}

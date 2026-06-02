@@ -1,0 +1,68 @@
+/* Product List Item */
+/* Media queries are page-dependent */
+
+.product-listing {
+  border: 1px solid #ffffff10;
+}
+
+.product-listing a {
+  text-decoration: none;
+  display: block;
+}
+
+.product-listing a img {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-listing .product-info {
+  padding: 0.25rem 1rem 1rem;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.product-listing .title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.product-listing .price {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.product-listing .sale {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.product-listing .sale p:first-child {
+  background-color: var(--col-sale);
+  border: 1px solid var(--col-sale);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: bolder;
+  padding: 0 10px;
+}
+
+.product-listing .sale p:last-child {
+  color: var(--col-sale);
+  font-weight: bolder;
+  text-decoration: line-through;
+}
+
+.product-listing .pre-order {
+  border: 1px solid var(--col-blue-hero);
+  background-color: var(--col-blue-hero);
+  color: #fff;
+  border-radius: var(--border-radius);
+
+  text-align: center;
+  font-weight: bolder;
+
+  text-align: start;
+  padding: 0 8px;
+  width: fit-content;
+}

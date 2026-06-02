@@ -1,0 +1,167 @@
+/* Moved anything involving main or aside
+    to the module css file
+*/
+
+#main-wrapper {
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-columns: 30% auto;
+  column-gap: 1rem;
+}
+
+/*Aside----*/
+form[inert] {
+  opacity: 0.2;
+}
+
+#price-fieldset div {
+  display: flex;
+  gap: 8px;
+}
+
+#price-fieldset div input {
+  font-size: 1.125rem;
+  padding: 4px;
+  border: 1px solid #00000080;
+  border-radius: var(--border-radius);
+
+  width: 50%;
+}
+
+#form-submit-btn,
+#clear-filters-btn {
+  font-size: 1.125rem;
+  padding: 4px;
+  border: 1px solid #fff;
+  border-radius: var(--border-radius);
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4px;
+  transition: background-color 0.25s ease;
+
+  background-color: #fff;
+  color: #000;
+}
+
+#form-submit-btn:hover,
+#clear-filters-btn:hover {
+  background-color: #b3b3c1;
+}
+
+#mobile-filters-close,
+#mobile-filters-open {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-filters-close > span,
+#mobile-filters-open > span {
+  font-size: 2.25rem;
+}
+
+/*Custom Checkbox*/
+.custom-checkbox {
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+
+  display: grid;
+  place-content: center;
+}
+
+.custom-checkbox input[type="checkbox"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-clip-path: polygon(80% 0, 97% 12%, 38% 100%, 0 68%, 12% 50%, 36% 69%);
+  clip-path: polygon(80% 0, 97% 12%, 38% 100%, 0 68%, 12% 50%, 36% 69%);
+
+  transform: scale(0);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  box-shadow: inset 1em 1em #000;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: var(--col-selected);
+  color: var(--col-selected);
+}
+
+.custom-checkbox > div {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translateY(-0.2em);
+}
+
+/*Responsive*/
+@media (max-width: 830px) {
+  #main-wrapper {
+    display: block;
+    height: fit-content;
+    position: relative;
+  }
+
+  #aside-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #00000070;
+  }
+
+  #aside-wrapper:is(.open) {
+    display: block;
+  }
+
+  #mobile-filters-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40%;
+  }
+
+  #mobile-filters-open {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  #mobile-filters-close {
+    left: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  #mobile-filters-close {
+    left: 80%;
+  }
+}

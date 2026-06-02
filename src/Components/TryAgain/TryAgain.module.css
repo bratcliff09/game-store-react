@@ -1,0 +1,32 @@
+/*Network Error*/
+.networkError p {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.networkError button {
+  padding: 4px 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  justify-self: center;
+
+  border-radius: var(--border-radius);
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+}
+
+.networkError button:hover {
+  background-color: #b3b3c1;
+}
+
+.networkError button:disabled {
+  background-color: #8c8c97;
+  color: #b3b3c1;
+  cursor: auto;
+}

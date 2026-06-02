@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,chevron_left,chevron_right,close,filter_list,menu,search,settings,shopping_cart");
+
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  background-color: var(--col-bg-black);
+  color: #fff;
+
+  --col-bg-black: #252324;
+
+  --col-sale: #528e52;
+  --col-selected: rgb(238, 206, 25);
+  --col-blue-1: #2b2a40;
+  --col-blue-2: #333249;
+  --col-blue-hero: #636aaa;
+
+  --col-cart-orange: #dfb808;
+
+  --col-blue-hover: rgb(35, 35, 68);
+  --col-gray: gray;
+  --col-gray-hover: rgb(75, 75, 80);
+  --col-scrollbar: #4b4956;
+
+  --col-add-to-cart: rgb(238, 206, 25);
+  --col-go-to-cart: rgb(132, 161, 239);
+
+  --section-padding: 1rem;
+  --border-radius: 8px;
+
+  --col-cta-hover: #c6cdff;
+  --col-cta-hover-2: #d7dbf7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+}
+
+main {
+  padding: 16px;
+}
