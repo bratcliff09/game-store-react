@@ -14,6 +14,10 @@ dist-ssr
 _docs
 _notes
 
+# Keeps the github version's base the same
+# Allows me to continue local work on the project
+vite.config.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

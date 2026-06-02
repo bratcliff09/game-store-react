@@ -90,7 +90,7 @@ function Home() {
             <div>
               <p>Video Games</p>
             </div>
-            <img src="/home_page/categories/image2.webp" />
+            <img src="home_page/categories/image2.webp" />
           </Link>
         </li>
         <li>
@@ -99,7 +99,7 @@ function Home() {
               <p>Consoles</p>
               <p>Coming Soon</p>
             </div>
-            <img src="/home_page/categories/image1.webp" />
+            <img src="home_page/categories/image1.webp" />
           </Link>
         </li>
         <li>
@@ -108,7 +108,7 @@ function Home() {
               <p>Figurines</p>
               <p>Coming Soon</p>
             </div>
-            <img src="/home_page/categories/image3.webp" />
+            <img src="home_page/categories/image3.webp" />
           </Link>
         </li>
         <li>
@@ -117,7 +117,7 @@ function Home() {
               <p>Books</p>
               <p>Coming Soon</p>
             </div>
-            <img src="/home_page/categories/image0.webp" />
+            <img src="home_page/categories/image0.webp" />
           </Link>
         </li>
       </ul>
